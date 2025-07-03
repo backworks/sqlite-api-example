@@ -1,4 +1,4 @@
-# SQLite API Plugin Example
+# SQLite API Example
 
 This example demonstrates how to use the Backworks SQLite plugin to create a REST API with database operations.
 
