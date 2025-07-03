@@ -1,0 +1,43 @@
+name: sqlite-api
+description: Example SQLite API using the Backworks SQLite plugin
+version: 1.0.0
+
+plugins:
+  - type: sqlite
+    config:
+      enabled: true
+      connections:
+        - name: main
+          database_url: sqlite:data/example.db
+          pool_size: 10
+
+endpoints:
+  - path: /api/init
+    method: POST
+    handler: ../handlers/init-database.js
+    description: Initialize database schema
+
+  - path: /api/users
+    method: GET
+    handler: ../handlers/list-users.js
+    description: Get all users
+
+  - path: /api/users
+    method: POST
+    handler: ../handlers/create-user.js
+    description: Create a new user
+
+  - path: /api/users/:id
+    method: GET
+    handler: ../handlers/get-user.js
+    description: Get user by ID
+
+  - path: /api/users/:id
+    method: PUT
+    handler: ../handlers/update-user.js
+    description: Update user by ID
+
+  - path: /api/users/:id
+    method: DELETE
+    handler: ../handlers/delete-user.js
+    description: Delete user by ID

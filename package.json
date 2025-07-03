@@ -1,0 +1,12 @@
+{
+  "name": "backworks-sqlite-example",
+  "version": "1.0.0",
+  "description": "Example SQLite API using the Backworks SQLite plugin",
+  "scripts": {
+    "start": "backworks start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "backworks": "file:../../"
+  }
+}
